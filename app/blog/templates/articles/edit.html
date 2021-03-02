@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+<form action="{% url 'blog:edit' article_id %}" method="POST">
+    {% csrf_token %}
+<div>
+{{ edit_form }}
+<br>
+<input type="submit" value="Save">
+</div>
+</form>
+{% endblock %}
